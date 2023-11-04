@@ -1,30 +1,12 @@
-import React from "react"
-import TopBar from "../top-bar/TopBar"
-import ItemsFilter from "../items-filter/ItemsFilter"
-import ItemCard from "../item-card/ItemCard"
+import React from "react";
+import TopBar from "../top-bar/TopBar";
+import ItemsFilter from "../items-filter/ItemsFilter";
+import ItemCard from "../item-card/ItemCard";
+import { ItemsContext } from "../../App";
 
 export default function HomePage () {
 
-  const [itemsCategories, setItemsCategories] = React.useState(["jewelery","men's clothing","women's clothing"]);
-  const [items, setItems] = React.useState(null);
-
-  React.useEffect(() => {
-    const fetchDataForCategories = async () => {
-      try {
-        const categoryPromises = itemsCategories.map((category) =>
-          fetch(`https://fakestoreapi.com/products/category/${category}`)
-            .then((res) => res.json())
-        );
-
-        const categoryData = await Promise.all(categoryPromises);
-        setItems(categoryData)
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    };
-    
-    fetchDataForCategories();
-  }, [itemsCategories]);
+  const { items } = React.useContext(ItemsContext);
 
   function renderItems(items) {
     return items && items.map(itemsArr => (
@@ -51,5 +33,5 @@ export default function HomePage () {
         {renderItems(items)}
       </div>
     </div>
-  )
+  );
 }
