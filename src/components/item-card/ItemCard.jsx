@@ -6,6 +6,7 @@ export default function ItemCard(props) {
       <img src={props.image} alt={props.description} className={style.img} />
       <h2>{props.title}</h2>
       <span>{props.rating.rate} {props.rating.count}</span>
+      <br />
       <span>{props.price} €</span>
     </button>
   )
