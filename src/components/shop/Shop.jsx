@@ -45,7 +45,7 @@ export default function HomePage () {
   
   return (
     <div>
-      <TopBar />
+        <TopBar />
       <ItemsCategoriesContext.Provider value={{itemsCategories, setItemsCategories}}>
         <ItemsFilter />
       </ItemsCategoriesContext.Provider>
