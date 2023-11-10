@@ -1,4 +1,4 @@
-import style from "./ItemCard.module.css"
+import style from "./ItemCard.module.css";
 
 export default function ItemCard(props) {
   return (
