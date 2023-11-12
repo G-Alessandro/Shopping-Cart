@@ -1,9 +1,15 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import CartItemsState from "../cart-items-state/CartItemsState.jsx"
+import { CartItemsContext } from "../../main"
 
 export default function TopBar () {
 
-  const { cartItems} = CartItemsState();
+  const {cartItems} = React.useContext(CartItemsContext);
+  const [itemsInTheCart, setItemsInTheCart] = React.useState(0);
+
+  React.useEffect(() => {
+    setItemsInTheCart(cartItems.reduce((total, item) => total + item.quantity, 0));
+  },[cartItems])
 
   return (
     <div>
@@ -12,7 +18,7 @@ export default function TopBar () {
         <nav>
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
-          <Link to="/cart">Cart {cartItems.length}</Link>
+          <Link to="/cart">Cart {itemsInTheCart > 0 && itemsInTheCart}</Link>
         </nav>
       </div>
     </div>
