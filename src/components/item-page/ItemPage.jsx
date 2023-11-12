@@ -15,13 +15,19 @@ export default function ItemPage() {
     const itemToBuy = item;
     itemToBuy.quantity = itemCount;
 
-    if (!cartItems.some((cartItem) => cartItem.id === itemToBuy.id)) {
-      setCartItems((prevCartItems) => [...prevCartItems, itemToBuy]);
+    if(itemCount > 0) {
+      if (!cartItems.some((cartItem) => cartItem.id === itemToBuy.id)) {
+        setCartItems((prevCartItems) => [...prevCartItems, itemToBuy]);
+      } else {
+        setCartItems((prevCartItems) =>
+          prevCartItems.map((cartItem) =>
+            cartItem.id === itemToBuy.id ? { ...cartItem, quantity: itemCount } : cartItem
+          )
+        );
+      }
     } else {
       setCartItems((prevCartItems) =>
-        prevCartItems.map((cartItem) =>
-          cartItem.id === itemToBuy.id ? { ...cartItem, quantity: itemCount } : cartItem
-        )
+          prevCartItems.filter((cartItem) => cartItem.quantity !== 0)
       );
     }
   }
@@ -39,7 +45,7 @@ export default function ItemPage() {
         <span>{item.price} €</span>
         <p>{item.description}</p>
         <div>
-          <button onClick={() => setItemCount(prevItemCount => prevItemCount - 1)}>-</button>
+          <button onClick={() => setItemCount(prevItemCount => prevItemCount > 0 ? prevItemCount - 1 : prevItemCount)}>-</button>
           <div role="region" aria-live="assertive">{itemCount}</div>
           <button onClick={() => setItemCount(prevItemCount => prevItemCount + 1)}>+</button>
         </div>
