@@ -25,6 +25,12 @@ export default function Cart() {
     });
   }
 
+  function removeItem(cartItem) {
+    setCartItems(prevCartItems => {
+      return prevCartItems.filter((item) => item.id !== cartItem.id);
+    })
+  }
+
   function showItemsCart() {
     return (
       cartItems.map(item => (
@@ -40,7 +46,7 @@ export default function Cart() {
             <button onClick={() => modifyItemQuantity(item, "add")}>+</button>
           </div>
           <h2>{item.quantity * item.price} €</h2>
-          <button>Remove</button>
+          <button onClick={() => removeItem(item)}>Remove</button>
         </div>
       ))
     );
