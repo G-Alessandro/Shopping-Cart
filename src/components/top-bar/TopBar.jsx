@@ -5,10 +5,10 @@ import { CartItemsContext } from "../../main"
 export default function TopBar () {
 
   const {cartItems} = React.useContext(CartItemsContext);
-  const [itemsInTheCart, setItemsInTheCart] = React.useState(0);
+  const [itemsQuantity, setItemsQuantity] = React.useState(0);
 
   React.useEffect(() => {
-    setItemsInTheCart(cartItems.reduce((total, item) => total + item.quantity, 0));
+    setItemsQuantity(cartItems.reduce((total, item) => total + item.quantity, 0));
   },[cartItems])
 
   return (
@@ -18,7 +18,7 @@ export default function TopBar () {
         <nav>
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
-          <Link to="/cart">Cart {itemsInTheCart > 0 && itemsInTheCart}</Link>
+          <Link to="/cart">Cart {itemsQuantity > 0 && itemsQuantity}</Link>
         </nav>
       </div>
     </div>

@@ -15,7 +15,7 @@ export default function HomePage () {
     const fetchDataForCategories = async () => {
       try {
         const categoryPromises = itemsCategories.map((category) =>
-          fetch(`https://fakestoreapi.com/products/category/${category}`, { mode: "cors" })
+          fetch(`https://fakestoreapi.com/products/category/${category}`, { mode: 'cors' })
             .then((res) => res.json())
         );
 

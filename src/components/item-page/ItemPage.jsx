@@ -50,7 +50,7 @@ export default function ItemPage() {
           <button onClick={() => setItemCount(prevItemCount => prevItemCount + 1)}>+</button>
         </div>
         <button onClick={() => addItemToCart()}>Add To Cart</button>
-        <button>Proceed To Checkout</button>
+        <Link to={'/cart'}><button>Proceed To Checkout</button></Link>
       </div>
     </div>
   )
