@@ -3,6 +3,7 @@ import HomePage from "./components/home-page/HomePage";
 import Shop from "./components/shop/Shop";
 import Cart from "./components/cart/Cart";
 import ItemPage from "./components/item-page/ItemPage";
+import ItemAddedPage from "./components/item-added-page/ItemAddedPage";
 
 const Router = () => {
 
@@ -22,6 +23,10 @@ const Router = () => {
     {
       path: "/game/:id",
       element: <ItemPage />,
+    },
+    {
+      path: "/item-added-page",
+      element: <ItemAddedPage />,
     },
   ]);
 

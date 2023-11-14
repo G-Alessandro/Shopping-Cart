@@ -49,7 +49,7 @@ export default function ItemPage() {
           <div role="region" aria-live="assertive">{itemCount}</div>
           <button onClick={() => setItemCount(prevItemCount => prevItemCount + 1)}>+</button>
         </div>
-        <button onClick={() => addItemToCart()}>Add To Cart</button>
+        <Link to={"/item-added-page"} state={{item:item}}><button onClick={() => addItemToCart()}>Add To Cart</button></Link>
         <Link to={'/cart'}><button>Proceed To Checkout</button></Link>
       </div>
     </div>

@@ -67,7 +67,7 @@ export default function Cart() {
         <div>
           {showItemsCart()}
           <div>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" ><button>Proceed To Checkout</button></a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer"><button>Proceed To Checkout</button></a>
           </div>
         </div>
       }
