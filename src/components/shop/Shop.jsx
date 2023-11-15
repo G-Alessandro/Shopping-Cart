@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import TopBar from "../top-bar/TopBar";
 import ItemsFilter from "../items-filter/ItemsFilter";
 import ItemCard from "../item-card/ItemCard";
+import style from "./Shop.module.css"
 
 export const ItemsCategoriesContext= React.createContext(null);
 
@@ -47,14 +48,16 @@ export default function HomePage () {
   }
 
   return (
-    <div>
+    <>
       <TopBar />
-      <ItemsCategoriesContext.Provider value={{itemsCategories, setItemsCategories}}>
-        <ItemsFilter />
-      </ItemsCategoriesContext.Provider>
-      <div>
-        {renderItems(items)}
+      <div className={style.shopPageContainer}>
+          <ItemsCategoriesContext.Provider value={{itemsCategories, setItemsCategories}}>
+            <ItemsFilter />
+          </ItemsCategoriesContext.Provider>
+        <div className={style.itemsContainer}>
+          {renderItems(items)}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

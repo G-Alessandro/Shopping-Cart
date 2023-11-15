@@ -1,0 +1,30 @@
+.categoryContainer {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+  margin-top: 15px;
+  margin-left: 25px;
+}
+
+.inputContainer {
+  margin-top: 10px;
+}
+
+.categoryContainer>.inputContainer>input {
+  margin-right: 8px;
+  height: 15px;
+  width: 15px;
+}
+
+.categoryContainer>.inputContainer>label {
+  font-size: 20px;
+}
+
+.categoryContainer>.inputContainer>label:hover {
+  border-bottom: 2px solid black;
+}
+
+input,
+label {
+  cursor: pointer;
+}

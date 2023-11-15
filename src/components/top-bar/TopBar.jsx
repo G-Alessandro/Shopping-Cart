@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CartItemsContext } from "../../main"
+import { CartItemsContext } from "../../main";
+import CartSvg from "../../assets/svg/cart1.svg"
+import style from "./TopBar.module.css";
 
 export default function TopBar () {
 
@@ -12,15 +14,13 @@ export default function TopBar () {
   },[cartItems])
 
   return (
-    <div>
-      <div>
-        <h1>Shop Name</h1>
-        <nav>
+      <div className={style.mainContainer}>
+        <Link to="/" className={style.shopName}>GlamGrove</Link>
+        <nav className={style.navContainer}>
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
-          <Link to="/cart">Cart {itemsQuantity > 0 && itemsQuantity}</Link>
+          <Link to="/cart" className={style.cartLink}>Cart <img src={CartSvg} /><div className={style.itemsNumber}>{itemsQuantity > 0 && itemsQuantity}</div></Link>
         </nav>
       </div>
-    </div>
   );
 }
