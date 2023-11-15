@@ -1,5 +1,6 @@
 .shopPageContainer {
   display: flex;
+  background-color: aliceblue;
 }
 
 .itemsContainer {
@@ -8,5 +9,4 @@
   row-gap: 10px;
   column-gap: 10px;
   padding: 10px;
-  background-color: aliceblue;
 }

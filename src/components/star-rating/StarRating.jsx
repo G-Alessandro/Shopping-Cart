@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import StarFull from "../../assets/svg/star-full.svg"
 import StarEmpty from "../../assets/svg/star-empty.svg"
 import StarHalf from "../../assets/svg/star-half.svg"
@@ -23,7 +24,7 @@ export default function StarRating(props) {
     }
 
     return starArr.map((star) => (
-      <img src={star} alt={`Average customer review of the item ${ratingScore}`} key={starArr.indexOf(props.id)}/>
+      <img src={star} alt={`Average customer review of the item ${ratingScore}`} key={uuidv4()}/>
     ))
 
   }

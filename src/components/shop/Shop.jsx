@@ -34,7 +34,7 @@ export default function HomePage () {
 
   function renderItems(items) {
     return items && items.map(item => (
-      <Link to={`/game/${item.id}`} key = {item.id} state={{item:item}}>
+      <Link to={`/game/${item.id}`} key={item.id} state={{item:item}}>
         <ItemCard 
           key = {item.id}
           image={item.image}
