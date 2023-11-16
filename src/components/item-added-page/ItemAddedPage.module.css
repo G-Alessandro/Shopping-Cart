@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.infoContainer {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.itemImg {
+  width: 120px;
+  height: auto;
+  border: 2px solid black;
+  background-color: white;
+  padding: 20px;
+}
+
+.addedTitle {
+  color: green;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 20px 0px;
+}
+
+.linkContainer {
+  display: flex;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.itemAddedLink {
+  background-color: aliceblue;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.itemAddedLink:hover {
+  color: white;
+  background-color: black;
+}

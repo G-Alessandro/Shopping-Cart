@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import TopBar from "../top-bar/TopBar";
+import style from "./ItemAddedPage.module.css"
 
 export default function ItemAddedPage() {
 
@@ -9,16 +10,18 @@ export default function ItemAddedPage() {
   return (
     <>
       <TopBar />
-      <h1>Added To Cart</h1>
-      <div>
-        <img src={item.image} alt={item.description}/>
-        <div>
-          <h2>{item.title}</h2>
+      <div className={style.container}>
+        <img src={item.image} alt={item.description} className={style.itemImg}/>
+        <div className={style.infoContainer}>
+          <div>
+            <h2>{item.title}</h2>
+            <p className={style.addedTitle}>✔ Added To Cart</p>
+          </div>
+          <div className={style.linkContainer}>
+            <Link to={'/shop'} className={style.itemAddedLink}>Keep Shopping</Link>
+            <Link to={'/cart'} className={style.itemAddedLink}>Proceed To Checkout</Link>
+          </div>
         </div>
-      </div>
-      <div>
-        <Link to={'/shop'}><button>Keep Shopping</button></Link>
-        <Link to={'/cart'}><button>Proceed To Checkout</button></Link>
       </div>
     </>
   )

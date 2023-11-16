@@ -41,7 +41,7 @@ export default function ItemPage() {
     <>
       <TopBar />
         <div className={style.container}>
-          <img src={item.image} alt={item.description} className={style.img}/>
+          <img src={item.image} alt={item.description} className={style.itemPageImg}/>
 
           <div className={style.itemInfoContainer}>
             <h2 className={style.itemTitle}>{item.title}</h2>
