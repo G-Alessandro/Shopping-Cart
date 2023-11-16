@@ -2,6 +2,9 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CartItemsContext } from "../../main"
 import TopBar from "../top-bar/TopBar";
+import StarRating from "../star-rating/StarRating";
+import AddSvg from "../../assets/svg/add.svg"
+import SubtractSvg from "../../assets/svg/subtract.svg"
 import style from "./ItemPage.module.css";
 
 export default function ItemPage() {
@@ -35,23 +38,41 @@ export default function ItemPage() {
   console.log("cartItems in ItemPage", cartItems)
 
   return (
-    <div>
+    <>
       <TopBar />
-      <Link to={'/shop'}><button>Back</button></Link>
-      <img src={item.image} alt={item.description} className={style.img}/>
-      <div>
-        <h2>{item.title}</h2>
-        <span>{item.rating.rate} {item.rating.count}</span>
-        <span>{item.price} €</span>
-        <p>{item.description}</p>
-        <div>
-          <button onClick={() => setItemCount(prevItemCount => prevItemCount > 0 ? prevItemCount - 1 : prevItemCount)}>-</button>
-          <div role="region" aria-live="assertive">{itemCount}</div>
-          <button onClick={() => setItemCount(prevItemCount => prevItemCount + 1)}>+</button>
+        <div className={style.container}>
+          <img src={item.image} alt={item.description} className={style.img}/>
+
+          <div className={style.itemInfoContainer}>
+            <h2 className={style.itemTitle}>{item.title}</h2>
+              <div className={style.ratingContainer}>
+                <StarRating 
+                  id={item.id}
+                  rate={item.rating.rate}
+                />
+                {item.rating.count}
+              </div>
+              <p className={style.itemPrice}>{item.price} €</p>
+              <h3 className={style.aboutTitle}>About this item :</h3>
+              <p className={style.itemDescription}>{item.description}</p>
+          </div>
+
+          <div className={style.quantityContainer}>
+            <div className={style.total}>Total : {item.price * itemCount} €</div>
+
+            <div className={style.btnItemQuantity}>
+              <button className={style.btnSubtract} onClick={() => setItemCount(prevItemCount => prevItemCount > 0 ? prevItemCount - 1 : prevItemCount)}><img src={SubtractSvg} alt="button to decrease the quantity of the chosen item by one"/></button>
+              <div role="region" aria-live="assertive" className={style.itemQuantity}>{itemCount}</div>
+              <button className={style.btnAdd} onClick={() => setItemCount(prevItemCount => prevItemCount + 1)}><img src={AddSvg} alt="button to increase the quantity of the chosen item by one"/></button>
+            </div>
+
+            <Link to={"/item-added-page"} state={{item:item}} onClick={() => addItemToCart()} className={style.addToCartBtn}>Add To Cart</Link>
+            <Link to={'/cart'} onClick={() => addItemToCart()} className={style.toCheckoutBtn}>Proceed To Checkout</Link>
+
+          </div>
+
         </div>
-        <Link to={"/item-added-page"} state={{item:item}}><button onClick={() => addItemToCart()}>Add To Cart</button></Link>
-        <Link to={'/cart'}><button>Proceed To Checkout</button></Link>
-      </div>
-    </div>
+        <Link to={'/shop'} className={style.goBackBtn}>Go back to the results</Link>
+    </>
   )
 }

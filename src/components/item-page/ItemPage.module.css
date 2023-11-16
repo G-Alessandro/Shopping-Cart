@@ -1,4 +1,122 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
 .img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: auto;
+  border: 2px solid black;
+  background-color: white;
+  padding: 20px;
+}
+
+.itemInfoContainer {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: auto;
+  background-color: white;
+  margin: 0px 30px auto;
+  padding: 20px;
+}
+
+.itemTitle {
+  font-size: 30px;
+}
+
+.ratingContainer {
+  margin-top: 10px;
+}
+
+.itemPrice {
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.aboutTitle {
+  border-top: 1px solid black;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+
+.itemDescription {
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 5px;
+}
+
+
+.quantityContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+}
+
+.total {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.btnItemQuantity {
+  display: flex;
+  padding: 5px 0px 15px;
+}
+
+.btnAdd,
+.btnSubtract {
+  width: 40px;
+  height: 30px;
+  background-color: white;
+  border: 2px solid rgb(23, 207, 75);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.itemQuantity {
+  font-size: 30px;
+  font-weight: 900;
+  margin: 0px 20px;
+}
+
+.btnSubtract {
+  border: 2px solid rgb(255, 96, 96);
+}
+
+.addToCartBtn,
+.toCheckoutBtn {
+  background-color: aliceblue;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.addToCartBtn:hover,
+.toCheckoutBtn:hover {
+  color: white;
+  background-color: black;
+}
+
+.goBackBtn {
+  background-color: aliceblue;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.goBackBtn:hover {
+  color: white;
+  background-color: black;
 }
