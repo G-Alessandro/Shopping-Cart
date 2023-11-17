@@ -35,8 +35,6 @@ export default function ItemPage() {
     }
   }
 
-  console.log("cartItems in ItemPage", cartItems)
-
   return (
     <>
       <TopBar />
@@ -58,12 +56,15 @@ export default function ItemPage() {
           </div>
 
           <div className={style.quantityContainer}>
-            <div className={style.total}>Total : {item.price * itemCount} €</div>
+            <div className={style.totalContainer}>
+              <h2 className={style.totalTitle}>Total :</h2>
+              <h2 className={style.total}>{item.price * itemCount} €</h2>
+            </div>
 
             <div className={style.btnItemQuantity}>
-              <button className={style.btnSubtract} onClick={() => setItemCount(prevItemCount => prevItemCount > 0 ? prevItemCount - 1 : prevItemCount)}><img src={SubtractSvg} alt="button to decrease the quantity of the chosen item by one"/></button>
+              <button className={style.btnSubtract} onClick={() => setItemCount(prevItemCount => prevItemCount > 1 ? prevItemCount - 1 : prevItemCount)}><img src={SubtractSvg} alt="button to decrease the quantity of the chosen item by one"/></button>
               <div role="region" aria-live="assertive" className={style.itemQuantity}>{itemCount}</div>
-              <button className={style.btnAdd} onClick={() => setItemCount(prevItemCount => prevItemCount + 1)}><img src={AddSvg} alt="button to increase the quantity of the chosen item by one"/></button>
+              <button className={style.btnAdd} onClick={() => setItemCount(prevItemCount => prevItemCount < 99 ? prevItemCount + 1 : prevItemCount)}><img src={AddSvg} alt="button to increase the quantity of the chosen item by one"/></button>
             </div>
 
             <Link to={"/item-added-page"} state={{item:item}} onClick={() => addItemToCart()} className={style.addToCartBtn}>Add To Cart</Link>

@@ -58,9 +58,17 @@
   padding: 20px;
 }
 
+.totalContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.totalTitle,
 .total {
-  font-size: 30px;
-  font-weight: 900;
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .btnItemQuantity {
@@ -78,14 +86,20 @@
   cursor: pointer;
 }
 
-.itemQuantity {
-  font-size: 30px;
-  font-weight: 900;
-  margin: 0px 20px;
+.btnSubtract {
+  border: 2px solid rgb(88, 88, 88);
 }
 
-.btnSubtract {
-  border: 2px solid rgb(255, 96, 96);
+.btnAdd:hover,
+.btnSubtract:hover {
+  scale: 1.2;
+}
+
+.itemQuantity {
+  width: 50px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
 }
 
 .addToCartBtn,
