@@ -14,7 +14,7 @@
 .itemImg {
   width: 120px;
   height: auto;
-  border: 2px solid black;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
   background-color: white;
   padding: 20px;
 }
@@ -33,15 +33,17 @@
 }
 
 .itemAddedLink {
-  background-color: aliceblue;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #ef9102;
   font-size: 15px;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
-  border: 1px solid black;
+  transition: transform 0.2s ease-in-out;
 }
 
 .itemAddedLink:hover {
-  color: white;
-  background-color: black;
+  transform: scale(1.1);
 }

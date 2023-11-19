@@ -87,9 +87,9 @@ export default function Cart() {
     <>
       <TopBar />
         {cartItems.length === 0 && 
-          <div>
+          <div className={style.emptyCartContainer}>
             <h2>Your Cart id empty! Click below to start shopping</h2>
-            <Link to={'/shop'}><button>SHOP NOW</button></Link>
+            <Link to={'/shop'} className={style.emptyCartLink}>SHOP NOW</Link>
           </div>
         }
         {cartItems.length > 0 &&

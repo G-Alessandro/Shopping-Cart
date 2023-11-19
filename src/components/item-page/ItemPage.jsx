@@ -35,6 +35,14 @@ export default function ItemPage() {
     }
   }
 
+  function itemTotalPrice() {
+    let total = (itemCount * item.price).toFixed(2);
+    if(total % 1 === 0) {
+      return (itemCount * item.price).toFixed(0);
+    }
+    return total;
+  }
+
   return (
     <>
       <TopBar />
@@ -58,7 +66,7 @@ export default function ItemPage() {
           <div className={style.quantityContainer}>
             <div className={style.totalContainer}>
               <h2 className={style.totalTitle}>Total :</h2>
-              <h2 className={style.total}>{item.price * itemCount} €</h2>
+              <h2 className={style.total}>{itemTotalPrice()} €</h2>
             </div>
 
             <div className={style.btnItemQuantity}>

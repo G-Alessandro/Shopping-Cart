@@ -5,7 +5,7 @@ export default function ItemCard(props) {
   return (
     <button key={props.id} className={style.card}>
 
-      <img src={props.image} alt={props.description} className={style.img} />
+      <img src={props.image} alt={props.description} className={style.cardImg} />
 
       <div className={style.container}>
         <h2 className={style.cardTitle}>{props.title}</h2>

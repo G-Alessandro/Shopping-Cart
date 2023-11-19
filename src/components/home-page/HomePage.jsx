@@ -5,16 +5,9 @@ import style from "./HomePage.module.css"
 export default function HomePage () {
 
   return (
-    <>
+    <div className={style.homePageContainer}>
       <TopBar />
-      <div className={style.homePageContainer}>
-        <div className={style.homePageImgContainer}>
-          <img src="" alt="" className={style.imgOne}/>
-          <img src="" alt="" className={style.imgTwo}/>
-          <img src="" alt="" className={style.imgThree}/>
-        </div>
-        <Link to="/shop" className={style.shopNowLink}>SHOP NOW</Link>
-      </div>
-    </>
+      <Link to="/shop" className={style.shopNowLink}>SHOP NOW</Link>
+    </div>
   );
 }

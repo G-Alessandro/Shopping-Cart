@@ -17,8 +17,9 @@
 }
 
 .mainContainer {
-  border-bottom: 2px solid black;
-  background-color: aliceblue;
+  position: sticky;
+  top: 0;
+  background-color: #ef9102;
 }
 
 .navContainer {
@@ -33,14 +34,14 @@
 }
 
 a {
-  color: black;
+  color: white;
   font-size: 25px;
   font-weight: 900;
   text-decoration: none;
 }
 
 .navContainer>a:hover {
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid white;
 }
 
 .cartLink {

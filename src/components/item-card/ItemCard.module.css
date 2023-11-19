@@ -8,9 +8,15 @@
   cursor: pointer;
   padding: 15px;
   background-color: white;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  border: none;
 }
 
-.img {
+.card:hover {
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cardImg {
   width: 140px;
   height: auto;
   margin-top: auto;

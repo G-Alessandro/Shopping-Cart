@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CartItemsContext } from "../../main";
-import CartSvg from "../../assets/svg/cart1.svg"
+import CartSvg from "../../assets/svg/cart.svg"
 import style from "./TopBar.module.css";
 
 export default function TopBar () {

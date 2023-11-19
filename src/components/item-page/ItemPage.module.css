@@ -1,3 +1,8 @@
+html,
+body {
+  background-color: #f2dccf;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -7,7 +12,7 @@
 .itemPageImg {
   width: 200px;
   height: auto;
-  border: 2px solid black;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
   background-color: white;
   padding: 20px;
 }
@@ -18,7 +23,6 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: auto;
-  background-color: white;
   margin: 0px 30px auto;
   padding: 0px 20px 20px;
 }
@@ -54,7 +58,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
   padding: 20px;
 }
 
@@ -84,6 +87,7 @@
   border: 2px solid rgb(23, 207, 75);
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
 .btnSubtract {
@@ -92,7 +96,7 @@
 
 .btnAdd:hover,
 .btnSubtract:hover {
-  scale: 1.2;
+  transform: scale(1.2);
 }
 
 .itemQuantity {
@@ -104,33 +108,35 @@
 
 .addToCartBtn,
 .toCheckoutBtn {
-  background-color: aliceblue;
+  color: white;
+  background-color: #ef9102;
   width: 100%;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   margin-top: 20px;
   border-radius: 5px;
-  border: 1px solid black;
+  transition: transform 0.2s ease-in-out;
 }
 
 .addToCartBtn:hover,
 .toCheckoutBtn:hover {
-  color: white;
-  background-color: black;
+  background-color: green;
+  transform: scale(1.06);
 }
 
 .goBackBtn {
-  background-color: aliceblue;
+  color: white;
+  background-color: #ef9102;
   font-size: 15px;
   text-align: center;
   padding: 5px;
   margin-left: 20px;
   margin-top: 10px;
   border-radius: 5px;
-  border: 1px solid black;
+  transition: transform 0.2s ease-in-out;
 }
 
 .goBackBtn:hover {
-  color: white;
-  background-color: black;
+  transform: scale(1.1);
+  background-color: green;
 }

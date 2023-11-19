@@ -1,28 +1,26 @@
 .homePageContainer {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.homePageImgContainer>img {
-  width: 300px;
-  height: 500px;
-  border: 2px solid black;
-}
-
-.imgTwo {
-  margin: 0px 50px;
+  background-image: url("../../assets/svg/clothes-store.svg");
+  background-color: #f2dccf;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .shopNowLink {
-  margin-top: 5px;
-  border: 3px solid black;
+  align-self: center;
+  width: fit-content;
+  margin-top: auto;
+  margin-bottom: 150px;
+  background-color: #ef9102;
   border-radius: 10px;
-  padding: 5px;
+  padding: 7px;
+  transition: transform 0.2s ease-in-out;
 }
 
 .shopNowLink:hover {
-  color: white;
-  background-color: black;
+  transform: scale(1.1);
+  background-color: green;
 }
