@@ -21,7 +21,7 @@ export default function TopBar () {
           <Link to="/shop">Shop</Link>
           <Link to="/cart" className={style.cartLink}>
             Cart 
-            <img src={CartSvg} />
+            <img src={CartSvg} className={style.cartImg}/>
             <div className={style.itemsNumber}>
               {itemsQuantity > 0 && itemsQuantity}
             </div>

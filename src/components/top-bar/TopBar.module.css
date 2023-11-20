@@ -87,5 +87,14 @@ img {
   .cartLink {
     display: flex;
   }
+  
+  .cartImg {
+    margin-left: 5px;
+  }
 
+  .itemsNumber {
+    top: -4px;
+    right: 7px;
+    font-size: 15px;
+  }
 }
