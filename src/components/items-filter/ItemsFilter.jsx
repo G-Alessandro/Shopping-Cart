@@ -24,7 +24,7 @@ export default function ItemsFilter() {
   return (
     <nav className={style.categoryContainer}>
 
-      <h2>Category</h2>
+      <h2 className={style.categoryTitle}>Category</h2>
 
       <div className={style.inputContainer}>
         <input 

@@ -28,3 +28,17 @@ input,
 label {
   cursor: pointer;
 }
+
+@media (max-width: 550px) {
+
+  .categoryContainer {
+    padding-right: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+
+  .categoryTitle {
+    font-size: 20px;
+  }
+}
