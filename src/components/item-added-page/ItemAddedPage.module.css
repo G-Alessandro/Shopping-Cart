@@ -20,8 +20,8 @@
 }
 
 .addedTitle {
-  color: green;
-  font-size: 20px;
+  color: #17b735;
+  font-size: 25px;
   font-weight: 400;
   margin: 20px 0px;
 }
@@ -46,4 +46,5 @@
 
 .itemAddedLink:hover {
   transform: scale(1.1);
+  background-color: #17b735;
 }

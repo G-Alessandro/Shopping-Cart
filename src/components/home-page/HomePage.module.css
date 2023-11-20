@@ -24,3 +24,10 @@
   transform: scale(1.1);
   background-color: green;
 }
+
+@media (max-width: 550px) {
+  .shopNowLink {
+    margin-bottom: 300px;
+    margin-right: 40px;
+  }
+}

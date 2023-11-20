@@ -19,7 +19,13 @@ export default function TopBar () {
         <nav className={style.navContainer}>
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
-          <Link to="/cart" className={style.cartLink}>Cart <img src={CartSvg} /><div className={style.itemsNumber}>{itemsQuantity > 0 && itemsQuantity}</div></Link>
+          <Link to="/cart" className={style.cartLink}>
+            Cart 
+            <img src={CartSvg} />
+            <div className={style.itemsNumber}>
+              {itemsQuantity > 0 && itemsQuantity}
+            </div>
+          </Link>
         </nav>
       </div>
   );

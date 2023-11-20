@@ -120,7 +120,7 @@ body {
 
 .addToCartBtn:hover,
 .toCheckoutBtn:hover {
-  background-color: green;
+  background-color: #17b735;
   transform: scale(1.06);
 }
 
@@ -138,5 +138,5 @@ body {
 
 .goBackBtn:hover {
   transform: scale(1.1);
-  background-color: green;
+  background-color: #17b735;
 }
