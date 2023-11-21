@@ -192,9 +192,17 @@
     font-size: 20px;
   }
 
-  .itemContainer {
+  /* .itemContainer {
     width: 300px;
     justify-content: center;
+    height: fit-content;
+    padding: 5px;
+  } */
+
+  .itemContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
     height: fit-content;
     padding: 5px;
   }
@@ -211,7 +219,7 @@
   }
 
   .cartItemInfo {
-    width: 150px;
+    width: fit-content;
     padding: 0px;
   }
 
@@ -237,7 +245,9 @@
   }
 
   .priceRemoveBtnContainer {
+    width: 100%;
     flex-direction: column-reverse;
+    align-items: flex-end;
   }
 
   .cartItemPrice {

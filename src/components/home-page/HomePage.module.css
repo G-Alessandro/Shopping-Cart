@@ -12,8 +12,7 @@
 .shopNowLink {
   align-self: center;
   width: fit-content;
-  margin-top: auto;
-  margin-bottom: 150px;
+  margin-top: 400px;
   background-color: #ef9102;
   border-radius: 10px;
   padding: 7px;
@@ -27,7 +26,8 @@
 
 @media (max-width: 550px) {
   .shopNowLink {
-    margin-bottom: 300px;
+    margin-top: 120px;
     margin-right: 40px;
+    border: 2px solid white;
   }
 }
